@@ -1,0 +1,57 @@
+@import '../utils/vars';
+
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $backdropBackground;
+  width: 100%;
+  height: 100%;
+  transition: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: none;
+  opacity: 0;
+}
+
+.is-hidden .modal {
+  transform: scale(0);
+}
+
+.modal {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 221px;
+  z-index: 1;
+  background-color: $modalBackground;
+  height: 581px;
+  width: 528px;
+  border-radius: 4px;
+  transition: transform;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &__button-contaier {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #000;
+    cursor: pointer;
+  }
+}

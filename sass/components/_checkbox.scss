@@ -1,0 +1,89 @@
+@import '../utils/vars';
+
+input[type='checkbox'] {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:checked {
+    background-color: $cardIconHoverBackground;
+    transition: $transition-cubic;
+    fill: $checkboxInputFill;
+    border-style: none;
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 20px;
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox__input {
+  width: 20px;
+  height: 20px;
+  background-color: $checkboxInputBackground;
+  border: 1px solid $checkboxLabel;
+  border-radius: 2px;
+}
+
+.checkbox__icon {
+  position: relative;
+  fill: $checkboxInputFill;
+  top: 6px;
+  right: 15px;
+}
+
+.checkbox__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $checkboxLabel;
+  letter-spacing: 0.03em;
+}
+
+.checkbox__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $checkboxLabel;
+  letter-spacing: 0.03em;
+}
+
+.checkbox__text--link {
+  text-decoration: underline;
+  color: $checkboxLabelSecondary;
+  cursor: pointer;
+  &:hover {
+    color: $checkboxLabelHover;
+    transition: $transition-cubic;
+  }
+}
+
+.custom-checkbox__button {
+  margin: 0 auto;
+  width: 200px;
+  border-style: none;
+  border-radius: 4px;
+  background-color: $checkboxButtonBackground;
+  padding: 10px 76px 10px 76px;
+  font-size: 16px;
+  color: $checkboxButtonText;
+
+  line-height: 1.875;
+
+  &:hover {
+    background-color: $checkboxButtonHover;
+    transition: $transition-cubic;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

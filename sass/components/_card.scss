@@ -1,0 +1,181 @@
+@import '../utils/vars';
+
+.card {
+  margin: 0;
+  background-color: $cardBodyBackground;
+}
+
+.card--flex {
+  @extend .card;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--shadow {
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: $transition-cubic;
+  }
+}
+
+.card--rounded-with-shadow {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.card__body {
+  margin-top: 30px;
+}
+
+.card__body--with-border {
+  margin-top: 0px;
+  border-bottom: 1px solid $cardBodyBorder;
+  border-left: 1px solid $cardBodyBorder;
+  border-right: 1px solid $cardBodyBorder;
+  padding: 20px 24px 20px 24px;
+}
+.card__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.card__social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cardIconBackground;
+  border-radius: 50%;
+  border: none;
+  fill: $cardIconFill;
+  cursor: pointer;
+}
+
+.card__social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cardIconBackground;
+  border-radius: 50%;
+  border: none;
+  fill: $cardIconFill;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $cardIconHoverBackground;
+    fill: $cardIconHoverFill;
+    transition: $transition-cubic;
+  }
+}
+
+.card__title {
+  font-weight: $textBold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.card__title--big {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 2;
+}
+.card__title--medium {
+  color: $primaryText;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+.card__text {
+  color: $secondaryTextGray;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.card__text--medium {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.card__overlay {
+  position: relative;
+  bottom: 73px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $overlayTextWhite;
+}
+
+.card__overlay-visually-hidden {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.card__light-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $overlayBackgroundLight;
+  transform: translatey(100%);
+  transition: $transition-cubic;
+  display: flex;
+  align-items: center;
+}
+
+.overlay__text {
+  color: $white;
+  padding-left: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  flex-basis: 301px;
+  letter-spacing: 0.03em;
+}
+
+.card:hover .card__light-overlay {
+  transform: translatex(0);
+  transition: $transition-cubic;
+}
+
+.card__overlay-text {
+  padding-bottom: 27px;
+  padding-top: 27px;
+  font-weight: $textBold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.card__light-overlay-text {
+  color: $overlayTextWhite;
+  padding-left: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  flex-basis: 326px;
+  letter-spacing: 0.03em;
+}

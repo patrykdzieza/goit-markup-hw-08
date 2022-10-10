@@ -1,0 +1,62 @@
+
+
+$font: 'Roboto', 'Raleway', sans-serif;
+
+
+  $primaryButton: #2196f3;
+  $primaryButtonHover: #006fc7;
+  $primaryButtonText: #fff;
+  $hover: #2196f3;
+  $secondaryTextGray: #757575;
+  $overlayTextWhite: #fff;
+  $primaryText: #212121;
+  $headerBorder: #f5f4fa;
+  $sectionSecondaryBackground: #f5f4fa;
+  $sectionPrimaryBackground: #fff;
+  $sectionIconFill: #afb1b8;
+
+  $filtersButton: #f5f4fa;
+  $filtersButtonHover: #2196f3;
+  $filtersButtonTextColor: #212121;
+  $filtersButtonTextColorHover: #fff;
+  $filtersButtonShadowHover: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  $heroBackground: #2f303a;
+  $heroTextWhite: #fff;
+
+  $cardIconFill: #afb1b8;
+  $cardBodyBackground: #fff;
+  $cardIconHoverFill: #fff;
+  $cardIconBackground: #fff;
+  $cardIconHoverBackground: #2196f3;
+  $cardBodyBorder: #eeeeee;
+  $textBold: 700;
+  $white: #fff;
+  $overlayBackgroundLight: rgba(33, 150, 243, 0.9);
+  $transition-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  $footerBackground: #2f303a;
+  $footerPrimaryText: #fff;
+  $footerSecondaryText: rgba(255, 255, 255, 0.6);
+  $footerIconFill: #fff;
+  $footerIconBackground: rgba(255, 255, 255, 0.1);
+  $footerIconBackgroundHover: #2196f3;
+
+  $logoPrimary: #212121;
+  $logoSecondary: #2196f3;
+  $logoPrimaryDarkTheme: #fff;
+
+  $backdropBackground: rgba(0, 0, 0, 0.2);
+  $modalBackground: #fff;
+
+  $inputPrimaryBorder: rgba(33, 33, 33, 0.2);
+  $inputBorderFocus: #2196f3;
+  $checkboxLabel: #757575;
+  $checkboxLabelSecondary: #2196f3;
+  $checkboxInputBackground: #fff;
+  $checkboxLabelHover: #2f303a;
+  $checkboxInputFill: #fff;
+  $checkboxButtonText: #fff;
+  $checkboxButtonBackground: #2196f3;
+  $checkboxButtonHover: #006fc7;
+  $contactformLabel: #757575;

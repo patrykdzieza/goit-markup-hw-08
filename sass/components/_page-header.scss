@@ -1,0 +1,66 @@
+@import '../utils/vars';
+
+.header {
+  border-bottom: 1px solid $headerBorder;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.contact-links {
+  margin-left: auto;
+  display: flex;
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    fill: $secondaryTextGray;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    color: $secondaryTextGray;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+}
+.contact-links__link {
+  &:hover,
+  &:focus {
+    color: $hover;
+    transition: $transition-cubic;
+    fill: $hover;
+  }
+}
+
+.contact-links__item
+{
+  &:hover,
+&:focus {
+  fill: $hover;
+  color: $hover;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
