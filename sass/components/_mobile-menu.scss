@@ -1,13 +1,220 @@
-.mobile-menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
-    z-index: 999;
-  
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+@import '../utils/vars';
+
+// .container {
+//   min-width: 320px;
+//   max-width: 1170px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.link {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  display: block;
+  padding: 10px;
+  color: $primaryText;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 500;
+}
+.link--active {
+  color: $secondaryTextBlue;
+}
+
+.mobile-menu .link:hover,
+.menu .link:focus {
+  color: $hover;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: $hover;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: rgb(0, 0, 0);
+}
+
+.mobile-menu {
+  padding-top: 48px;
+  padding-left: 40px;
+  padding-right: 83px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &__contact {
+    padding-top: 220px;
+    padding-bottom: 64px;
+  }
+  &__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__contact-item {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $secondaryTextGray;
+    list-style: none;
+
+    &--big {
+      @extend .mobile-menu__contact-item;
+      font-size: 34px;
+      line-height: 1.17;
+      color: $secondaryTextBlue;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__footer {
+    display: flex;
+  }
+  &__footer-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  &__footer-item {
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $secondaryTextBlue;
+
+    letter-spacing: 0.02em;
+
+    &--gray {
+      @extend .mobile-menu__footer-item;
+      color: $mobileMenuSeparator;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .link {
+    font-size: 35px;
+  }
+  .mobile-menu__contact-item {
+    font-size: 20px;
+  }
+  .mobile-menu__contact-item--big {
+    font-size: 25px;
+  }
+  .mobile-menu__contact {
+    padding-top: 100px;
+  }
+
+  .mobile-menu {
+    padding-left: 30px;
+    padding-right: 27px;
+  }
+
+  .mobile-menu__footer-item {
+    font-size: 15px;
+  }
+  .mobile-menu__footer-list {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .link {
+    font-size: 35px;
+  }
+  .mobile-menu__contact-item {
+    font-size: 20px;
+  }
+  .mobile-menu__contact-item--big {
+    font-size: 25px;
+  }
+  .mobile-menu__contact {
+    padding-top: 100px;
+  }
+
+  .mobile-menu {
+    padding-left: 30px;
+    padding-right: 27px;
+  }
+
+  .mobile-menu__footer-item {
+    font-size: 15px;
+  }
+  .mobile-menu__footer-list {
+    flex-wrap: wrap;
+  }
 }

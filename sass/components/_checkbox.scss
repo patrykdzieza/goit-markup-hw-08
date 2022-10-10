@@ -87,3 +87,33 @@ input[type='checkbox'] {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
+@media (min-width: 768px) and (max-width: 1199px){
+  .checkbox__input {
+    width: 16px;
+    height: 15px;
+    border: 1px solid #212121;
+  }
+  .checkbox__icon {
+    top: 3px;
+    right: 13px;
+  }
+
+  .checkbox__text {
+    font-size: 12px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .checkbox__input {
+    width: 16px;
+    height: 15px;
+    border: 1px solid #212121;
+  }
+  .checkbox__icon {
+    top: 3px;
+    right: 13px;
+  }
+
+  .checkbox__text {
+    font-size: 12px;
+  }
+}

@@ -179,3 +179,46 @@
   flex-basis: 326px;
   letter-spacing: 0.03em;
 }
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .card__title {
+    text-align: center;
+  }
+  .card__text {
+    text-align: justify;
+  }
+  .card__text--medium {
+    text-align: center;
+  }
+  .card__feature-icon {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 300px;
+    height: 120px;
+  }
+  .card__body {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .card__title {
+    text-align: center;
+  }
+  .card__text {
+    text-align: justify;
+    padding-right: 23px;
+  }
+  .card__text--medium {
+    text-align: center;
+  }
+  .card__feature-icon {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card__feature-icon {
+    width: 100%;
+  }
+}

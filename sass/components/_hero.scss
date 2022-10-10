@@ -1,5 +1,21 @@
 @import '../utils/vars';
 
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+  .hero {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -41,5 +57,41 @@
     background-color: $primaryButtonHover;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media (min-width: 320px) and (max-width: 479px){
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+  .hero {
+    background-size: cover;
+  }
+
+  .hero__container{
+    padding: 118px 57px 118px 57px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+  .hero {
+    background-size: cover;
+  }
+
+  .hero__container{
+    padding: 118px 57px 118px 57px;
+  }
+}
+
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+   background-image: url('/goit-markup-hw-08/images/header_2x.jpg'); 
+   background-size: cover;
   }
 }
