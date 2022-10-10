@@ -227,7 +227,6 @@ body {
   background-color: #f5f4fa;
   padding-bottom: 94px;
 }
-
 .section__content, .section__content--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,11 +248,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .section__item {
   list-style: none;
 }
-
 .section__title {
   font-weight: 700;
   color: #212121;
@@ -263,7 +260,6 @@ body {
   letter-spacing: 0.03em;
   padding-bottom: 50px;
 }
-
 .section__client-icon {
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -998,54 +994,18 @@ input[type=checkbox]:checked {
           justify-content: center;
   fill: #000;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */(0);
-          transform: scale(0);
-}
-
-.modal {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 221px;
-  z-index: 1;
-  background-color: #fff;
-  height: 581px;
-  width: 528px;
-  border-radius: 4px;
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.modal__button-contaier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.modal__close-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  fill: #000;
-  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */ed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }/*# sourceMappingURL=main.css.map */
