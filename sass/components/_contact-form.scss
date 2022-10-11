@@ -85,3 +85,11 @@
     transition: $transition-cubic;
   }
 }
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .contact-form__input-field--comment {
+    height: 40px;
+    padding-top: 12px;
+  }
+ 
+}
